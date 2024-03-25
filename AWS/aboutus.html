@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<style>
+ body {
+    background-color: black;
+    color: white;
+ }  
+
+ #logo {
+        font-family: 'Arial', sans-serif;
+          font-size: 1em;
+          font-weight: bold;
+          color: gold;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+          position: absolute;
+          left: 50px;
+    }
+        
+header {
+    margin: 0px;
+    padding: 10px 0px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 4px 10px;
+    position: relative;
+    left: 65%;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+.about {
+    color: white;
+    margin: 0px;
+    padding-bottom: 390px;
+}
+
+.aboutus {
+    text-align: center;
+}
+
+.aboutus h1 {
+    color: goldenrod;
+}
+
+.teams p {
+    text-align: center;
+}
+
+.visit p {
+    text-align: center;
+}
+
+.location h4 {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    color: gold;
+}
+
+.location p {
+    position: absolute;
+    top: 55%;
+    left: 5%;
+
+}
+
+.chat-container {
+    position: absolute;
+    top: 45%;
+    right: 10%;
+    max-width: 200px;
+    border-radius: 5px;
+}
+
+#chat-box {
+    height: 150px;
+    overflow-y: scroll;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color:dimgrey;
+    color: white;
+}
+
+#user-input {
+    width: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 70px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.social-media {
+    margin-bottom: 20px;
+    position: absolute;
+    top: 60%;
+    left: 30%;
+}
+
+.social-media h4 {
+    position: absolute;
+    bottom: 90%;
+    left: 5%;
+    color: gold;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    left: 45%;
+    color: gold;
+}
+
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div id="logo">Fit Fusion Hub</div>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="plans.html">Our Plans</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+  <div class="about">
+    <div class="aboutus">
+    <h1> About us </h1>
+    <p> At Fit Fusion Hub, we're passionate about helping you achieve your fitness goals and leading a healthier lifestyle. With state-of-the-art facilities, expert trainers, and a supportive community, we're here to empower you on your fitness journey. Our mission is to inspire and motivate individuals to prioritize their health and wellness through personalized fitness programs, nutritional guidance, and a positive environment</p>
+    </div>
+    
+    <div class="teams">
+    <p> Our team of passionate fitness professionals is committed to providing you with the support and motivation you need to succeed. From certified trainers to friendly staff, we're here to ensure your fitness journey is enjoyable and rewarding. At Fit Fusion Hub, we believe in the power of community. Join our vibrant community of fitness enthusiasts who motivate and inspire each other to push beyond their limits and achieve greatness.</p>
+    </div>
+
+    <div class="visit">
+    <p> Whether you're a beginner or an experienced athlete, Fit Fusion Hub welcomes individuals of all fitness levels. Visit us today to experience our welcoming atmosphere, world-class facilities, and commitment to your fitness success.</p>
+    </div>
+
+    <div class="location">
+        <h4> Address:</h4>
+        <p> Subhash nagar,<br> Nahur village raod, Bhandup-west,<br> Mumbai - 400078 </p>
+    </div>
+
+    <div class="social-media">
+        <h4> Social Links</h4>
+        <a href="https://www.facebook.com/FitFusionHub" target="_blank"><img src="Facebook.png" alt="Facebook"></a>
+        <a href="https://www.twitter.com/FitFusionHub" target="_blank"><img src="Twitter.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/FitFusionHub" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+        <!-- Add more social media links/icons as needed -->
+    </div>
+
+    <div class="chat-container">
+        <h4> Ask Anything</h4>
+        <div id="chat-box"></div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; Fit Fusion Hub  Website</p>
+</footer>
+
+    <script>
+        function sendMessage() {
+            var userMessage = document.getElementById("user-input").value;
+            var chatBox = document.getElementById("chat-box");
+            chatBox.innerHTML += "<p><strong>You:</strong> " + userMessage + "</p>";
+            document.getElementById("user-input").value = ""; // Clear input field
+            // Add response (bot's message)
+            setTimeout(function() {
+                chatBox.innerHTML += "<p><strong>Gym Bot:</strong> " + getResponse(userMessage) + "</p>";
+                chatBox.scrollTop = chatBox.scrollHeight; // Scroll to bottom of chat box
+            }, 500); // Simulate bot typing delay
+        }
+        
+        function getResponse(message) {
+            // Simple logic for responding to user messages
+            message = message.toLowerCase();
+            if (message.includes("membership")) {
+                return "We offer various membership plans. Please visit our plans section for more details.";
+            } else if (message.includes("schedule")) {
+                return "Our gym is open from 6:00 AM to 10:00 PM every day.";
+            } else if (message.includes("trainer")) {
+                return "Yes, we have certified personal trainers available. You can book a session with them.";
+            } else {
+                return "I'm sorry, I didn't understand that. How can I assist you?";
+            }
+        }
+        
+    </script>
+</body>
+</html>

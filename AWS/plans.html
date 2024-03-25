@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    body {
+        background-image: url('cbum1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+    }
+    #logo {
+        font-family: 'Arial', sans-serif;
+          font-size: 1em;
+          font-weight: bold;
+          color: gold;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+          position: absolute;
+          left: 50px;
+    }
+        
+header {
+    margin: 0px;
+    padding: 10px 0px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 4px 10px;
+    position: relative;
+    left: 65%;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+body h1 {
+    text-align: center;
+    color:goldenrod;
+}
+
+.plans-container {
+    text-align: center;
+}
+
+.plans-container h2 {
+    color:goldenrod;
+}
+
+.plans-container p {
+    color:ivory;
+}
+
+.plan1 {
+    position: absolute;
+    top: 20%;
+    left: 4%;
+}
+
+.plan2 {
+    position: absolute;
+    top: 45%;
+    left: 20%;
+}
+
+.plan3 {
+    position: absolute;
+    top: 75%;
+    left: 2%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    color: gold;
+}
+
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div id="logo">Fit Fusion Hub</div>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="plans.html">Our Plans</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <h1>Our Plans</h1>
+
+    <main>
+    <section class="plans-container">
+        <div class="plan1">
+            <h2>Basic Plan</h2>
+            <p>Access to basic gym facilities</p>
+            <p>Price: ₹6500/yearly</p>
+            <button onclick="buyPlan('Basic Plan')">Buy Now</button>
+        </div>
+
+        <div class="plan2">
+            <h2>Standard Plan</h2>
+            <p>Access to advanced gym facilities and personal trainer</p>
+            <p>Price: ₹12,000/yearly</p>
+            <button onclick="buyPlan('Pro Plan')">Buy Now</button>
+        </div>
+
+        <div class="plan3">
+            <h2>Premium Plan</h2>
+            <p>Access to all gym facilities, personal trainer, and nutrition guidance</p>
+            <p>Price: ₹16,000/yearly</p>
+            <button onclick="buyPlan('Premium Plan')">Buy Now</button>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>&copy; Fit Fusion Hub  Website</p>
+</footer>
+
+<script>
+    function buyPlan(planName) {
+        alert(`You have purchased the ${planName}. Thank you!`);
+
+        window.location.href = 'index.html';
+    }
+</script>
+</body>
+</html>

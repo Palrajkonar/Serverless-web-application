@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<style>
+    body {
+        background-image: url('ramon.jpg');
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #logo {
+        font-family: 'Arial', sans-serif;
+          font-size: 1em;
+          font-weight: bold;
+          color: gold;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+          position: absolute;
+          left: 50px;
+    }
+        
+header {
+    margin: 0px;
+    padding: 10px 0px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 4px 10px;
+    position: relative;
+    left: 65%;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+body h1 {
+    text-align: center;
+    color: goldenrod;
+}
+
+.contact-form {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 500px;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: white;
+    margin-bottom: 8px;
+}
+
+button {
+    background-color: goldenrod;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    color: gold;
+}
+
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div id="logo">Fit Fusion Hub</div>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="plans.html">Our Plans</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Contact Us</h1>
+<main>
+    <section class="contact-form">
+        <form id="contactForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </section>
+</main>
+
+    <footer>
+        <p>&copy; Fit Fusion Hub Website</p>
+    </footer>
+
+    <script>
+        function submitForm() {
+            event.preventDefault();
+        
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+        
+            // Create request object
+            const xhr = new XMLHttpRequest();
+        
+            // Set up request
+            xhr.open('POST', 'https://15dcg8cmmk.execute-api.us-east-1.amazonaws.com/test/register', true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+        
+            // Set up response handler
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        alert('Registration successful!');
+                        document.getElementById('name').value = '';
+                        document.getElementById('email').value = '';
+                        document.getElementById('message').value = '';
+                    } else {
+                        alert('Registration failed: ' + xhr.responseText);
+                    }
+                }
+            };
+        
+            // Send request
+            xhr.send(JSON.stringify({
+                name: name,
+                email: email,
+                message: message,
+            }));
+        }
+        
+    </script>
+</body>
+</html>

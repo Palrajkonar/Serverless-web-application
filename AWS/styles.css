@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("cbum.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#logo {
+    font-family: 'Arial', sans-serif;
+      font-size: 1em;
+      font-weight: bold;
+      color: gold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      left: 50px;
+}
+
+header {
+    margin: 0px;
+    padding: 10px 0px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 4px 10px;
+    position: relative;
+    left: 65%;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+.hero {
+    position: absolute;
+    top: 10%;
+    left: 37%;
+}
+
+.hero p {
+    font-size: 1.2em;
+    position: absolute;
+    left: 15%;
+}
+
+.cta-button {
+    position: absolute;
+    left: 35%;
+    top: 180%;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color:dimgrey;
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+#text-overlay {
+    position: absolute;
+    top: 80%;
+    left: 15%;
+    font-size: 1.9em;
+    color: white;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    color: gold;
+}
