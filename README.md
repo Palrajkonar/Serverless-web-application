@@ -33,5 +33,13 @@ Visual Studio Code.
 *	After the python code is deployed, then I have created an API Gateway in AWS using REST API, inside that REST API I created a resource, methods, enabling CORS and Deploying API.
 *	In the REST API Methods, I have given type as POST and Service is Lambda, it by automatically shows the Lambda Function that I created click on that and save.
 *	After Deploying API a URL is given to me and copied that URL and pasted in registration form java script page.
+*	Then, created one S3 Bucket and uploaded all the HTML, CSS , JS files related to website in that bucket and given public access to the files and bucket.
+*	Copied index.html file link in the bucket and pasted in the browser and gym website is opened. 
 *	After that try registering dummy user in that form and it was successfully stored in AWS DynamoDB Table that I have created.
+*	S3 bucket Which I have created is for public access to give that link to anyone for testing purpose, Creating S3 Bucket is not mandatory You can also Paste the API Gateway link in JS on Visual Studio Code, you will get the registration successful and the User data will be stored in the DynamoDB.
 
+
+
+### Project Link.
+
+* Video URL : https://drive.google.com/file/d/1mrwdPCgiUXjNtd3Pcz0pguMzZDZLly0t/view?usp=drive_link
