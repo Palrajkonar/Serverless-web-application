@@ -11,7 +11,7 @@ function submitForm() {
     const xhr = new XMLHttpRequest();
 
     // Set up request
-    xhr.open('POST', '/register', true);
+    xhr.open('POST', 'https://64o4jndh1k.execute-api.ap-south-1.amazonaws.com/test/register', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
 
     // Set up response handler
